@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Cloning repo') { 
             steps {
-                sh " sudo mkdir /var/www/html"
                 sh "sudo git clone https://github.com/pemba3690/php.git /var/www/html/"
                 sh " sudo php artisan migrate "
                 sh " sudo php artisan db:seed "
